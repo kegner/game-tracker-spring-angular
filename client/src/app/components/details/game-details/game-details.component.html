@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header bg-dark text-white">
+    Game Details
+  </div>
+  <div class="card-body">
+    <div class="row mb-3">
+      <div class="col-3">
+        <app-details-item label="Title" [value]="selectedGame.title"></app-details-item>
+      </div>
+      <div class="col-3">
+        <app-details-item label="Platform" [value]="selectedGame.platform"></app-details-item>
+      </div>
+      <div class="col-3">
+        <app-details-item label="Start Date" [value]="selectedGame.startDate"></app-details-item>
+      </div>
+      <div class="col-3">
+        <app-details-item label="End Date" [value]="selectedGame.endDate"></app-details-item>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-3">
+        <app-details-item label="Status" [value]="selectedGame.status"></app-details-item>
+      </div>
+      <div class="col-3">
+        <app-details-item label="Hours to Complete" [value]="selectedGame.hoursToComplete"></app-details-item>
+      </div>
+      <div class="col-3">
+        <app-details-item label="Rating" [value]="selectedGame.rating"></app-details-item>
+      </div>
+      <div class="col-3">
+        <app-details-item label="Price" [value]="selectedGame.price" [currency]="true"></app-details-item>
+      </div>
+    </div>
+  </div>
+</div>

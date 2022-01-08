@@ -1,0 +1,22 @@
+<ng-container *ngIf="!isLoggedIn; else elseBlock">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="row mb-4">
+      <div class="col-6">
+        <app-form-item name="username" label="Username" ngModel></app-form-item>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-6">
+        <app-form-item name="password" label="Password" type="password" ngModel></app-form-item>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-6">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</ng-container>
+<ng-template #elseBlock>
+  <div>You are already logged in.</div>
+</ng-template>

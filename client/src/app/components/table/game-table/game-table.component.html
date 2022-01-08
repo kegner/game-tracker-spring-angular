@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header bg-dark text-white">
+    Game Table
+  </div>
+  <div class="card-body p-0">
+    <table class="table table-hover table-sm">
+      <caption class="visually-hidden">Game Table</caption>
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">Title</th>
+          <th scope="col" class="text-center">Status</th>
+          <th scope="col" class="text-center">Rating</th>
+          <th scope="col" class="text-center">Delete</th>
+        </tr>
+      </thead>
+      <tbody app-table-body [gamesPages]="gamesPages" [pageIndex]="pageIndex"></tbody>
+      <tfoot app-table-footer [gamesPages]="gamesPages" [pageIndex]="pageIndex" [itemsPerPage]="itemsPerPage"
+        (pageChange)="setIndex($event)"></tfoot>
+    </table>
+  </div>
+  <app-spinner *ngIf="loading"></app-spinner>
+</div>

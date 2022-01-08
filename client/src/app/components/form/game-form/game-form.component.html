@@ -1,0 +1,50 @@
+<div class="position-relative">
+  <div class="card">
+    <form #gameForm="ngForm">
+      <div class="card-header bg-dark text-white">
+        Game Form
+      </div>
+      <div class="card-body">
+        <input type="hidden" name="id" [(ngModel)]="id" />
+        <div class="row mb-2">
+          <div class="col-3">
+            <app-form-item name="title" label="Title" [(ngModel)]="title"></app-form-item>
+          </div>
+          <div class="col-3">
+            <app-form-item name="platform" label="Platform" [(ngModel)]="platform"></app-form-item>
+          </div>
+          <div class="col-3">
+            <app-form-item name="startDate" label="Start Date" type="date" [(ngModel)]="startDate"></app-form-item>
+          </div>
+          <div class="col-3">
+            <app-form-item name="endDate" label="End Date" type="date" [(ngModel)]="endDate"></app-form-item>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-3">
+            <app-form-item name="status" label="Status" [(ngModel)]="status"></app-form-item>
+          </div>
+          <div class="col-3">
+            <app-form-item name="hoursToComplete" label="Hours to Complete" [(ngModel)]="hoursToComplete"></app-form-item>
+          </div>
+          <div class="col-3">
+            <app-form-item name="rating" label="Rating" type="number" [(ngModel)]="rating"></app-form-item>
+          </div>
+          <div class="col-3">
+            <app-form-item name="price" label="Price" type="number" [(ngModel)]="price"></app-form-item>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer bg-dark text-white">
+        <div class="d-flex justify-content-end align-items-end">
+          <button class="btn btn-primary" type="submit" (click)="onCreate(gameForm)" 
+            [attr.disabled]="title ? null : true">Create New</button>
+          <div class="mx-2"></div>
+          <button class="btn btn-primary" type="submit" (click)="onUpdate(gameForm)" 
+            [attr.disabled]="id ? null : true">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <app-spinner *ngIf="saving"></app-spinner>
+</div>

@@ -1,0 +1,37 @@
+<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+  <div class="row mb-4">
+    <div class="col-6">
+      <app-form-item name="firstName" label="First Name" [isRequired]="true"
+        [(validClass)]="firstNameValidClass" ngModel></app-form-item>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-6">
+      <app-form-item name="lastName" label="Last Name" [isRequired]="true" 
+        [(validClass)]="lastNameValidClass" ngModel></app-form-item>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-6">
+      <app-form-item name="email" label="Email" type="email" [isRequired]="true" 
+       [(validClass)]="emailValidClass" ngModel></app-form-item>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-6">
+      <app-form-item name="username" label="Username" [isRequired]="true" 
+        [(validClass)]="usernameValidClass" ngModel></app-form-item>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-6">
+      <app-form-item name="password" label="Password" type="password" [isRequired]="true" 
+        [(validClass)]="passwordValidClass" ngModel></app-form-item>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-6">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,12 @@
+<tr>
+  <td colspan="4" class="border-0">
+    <div class="d-flex">
+      <div class="align-self-center ms-1">
+        <app-table-count [pageIndex]="pageIndex" [itemsPerPage]="itemsPerPage"></app-table-count>
+      </div>
+      <div class="ms-auto">
+        <app-table-pagination [pageIndex]="pageIndex" [gamesPages]="gamesPages" (pageChange)="pageButtonHandler($event)"></app-table-pagination>
+      </div>
+    </div>
+  </td>
+</tr>

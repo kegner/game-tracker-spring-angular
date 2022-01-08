@@ -1,0 +1,9 @@
+<ul class="navbar-nav ms-auto">
+  <li class="nav-item">
+    <span *ngIf="isLoggedIn" class="d-block py-2 px-2 text-white">Hello, {{ user.firstName }} </span>
+  </li>
+  <li class="nav-item">
+    <a *ngIf="!isLoggedIn" class="nav-link active" routerLink="/login">Sign In</a>
+    <button *ngIf="isLoggedIn" class="btn btn-link nav-link" (click)="onLogout()">Sign Out</button>
+  </li>
+</ul>

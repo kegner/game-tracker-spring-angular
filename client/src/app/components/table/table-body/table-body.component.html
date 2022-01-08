@@ -1,0 +1,7 @@
+<tr *ngFor="let game of gamesPages[pageIndex]" [ngClass]="selectedGame.id === game.id ? 'table-active' : ''" (click)="rowClickHandler(game)">
+  <td class="text-center">{{ game.title }}</td>
+  <td class="text-center">{{ game.status }}</td>
+  <td class="text-center">{{ game.rating }}</td>
+  <td class="text-center"><app-delete-button [id]="game.id"></app-delete-button></td>
+</tr> 
+

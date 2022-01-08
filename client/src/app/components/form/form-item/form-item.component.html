@@ -1,0 +1,5 @@
+<label for="username" class="form-label">
+  <span *ngIf="isRequired" class="text-danger" aria-required="true">* </span>{{ label }}
+</label>
+<input type="text" class="form-control" [ngClass]="validClass" [id]="name" [name]="name" 
+    [type]="type" [(ngModel)]="formVal" (ngModelChange)="onChange($event)" (blur)="onBlur()" />
