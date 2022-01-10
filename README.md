@@ -41,7 +41,8 @@ server.ssl.enabled=false
 Running the frontend separately while developing allows for faster iteration by utilizing Angular's hot reloading.
 
 * Navigate to the `/client/` folder
-* Run the command `npm start`. This will start the app on localhost:4200
+* For the first time building, run `npm install` to install the npm dependencies
+* Run the command `npm start`. This will start the app on localhost:4200 using the proxy configuration
 
 Confirm the `proxy.conf.json` file has the correct port for your Spring Boot applicaton.
 
